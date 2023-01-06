@@ -33,7 +33,7 @@ public class LogIn {
     }
 
     @Test(priority = 1)
-    void LoginBookStore() throws InterruptedException {
+    void LoginBookStore() {
         // UserName
         By userNameLocate = new By.ByCssSelector("#userName");
         WebElement userNameEL = driver.findElement(userNameLocate);
