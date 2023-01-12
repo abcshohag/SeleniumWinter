@@ -1,9 +1,7 @@
 
 import Utils.DriverUtil;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -39,13 +37,13 @@ public class BookstoreLogin {
         Assert.assertEquals(driver.getCurrentUrl(), bookstorePage.loginUrl);
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = "Smoke Test")
     void LoginBookStore() throws InterruptedException {
-        driver.findElement( bookstorePage.userNameLocator ).sendKeys("Adamhamilton@gmail.com");
+        driver.findElement(bookstorePage.userNameLocator).sendKeys("Adamhamilton@gmail.com");
         driver.findElement(bookstorePage.passwordLocator).sendKeys("@Adam123");
-        driver.findElement( bookstorePage.loginButtonLocator ).click();
+        driver.findElement(bookstorePage.loginButtonLocator).click();
         Thread.sleep(3000);
-        String userNameFromPage = driver.findElement( bookstorePage.userNameLabelLocator ).getText();
+        String userNameFromPage = driver.findElement(bookstorePage.userNameLabelLocator).getText();
         Assert.assertEquals(userNameFromPage, "Adamhamilton@gmail.com");
         DriverUtil.zoomOutToPercentage(.50);
     }
@@ -55,8 +53,4 @@ public class BookstoreLogin {
         Thread.sleep(5000);
         driver.quit();
     }
-
-
-
-
 }

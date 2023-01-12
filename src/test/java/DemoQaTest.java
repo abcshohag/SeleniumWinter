@@ -23,7 +23,7 @@ public class DemoQaTest {
     }
 
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = "Smoke Test")
     void testingElement(){
         // Click on the Element Menu
         By elementLocator = new By.ByCssSelector(".mt-4:first-child");
