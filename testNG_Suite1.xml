@@ -6,8 +6,14 @@
 
     <test name="Regression1">
         <classes>
-            <class name="BookstoreLogin"/>
-            <class name="DemoQaTest"/>
+            <class name="DemoQA.BookstoreLogin"/>
+            <class name="DemoQA.DemoQA"/>
+            <class name="DemoQA.DemoQAPracticeForm"/>
+            <class name="DemoQA.SelectMenuTest"/>
+            <class name="DemoQA.DemoQaTest"/>
+            <class name="the_internet.DynamicLoading"/>
+            <class name="WayToAutomation.JSAlert"/>
+            <class name="WayToAutomation.RegistrationFormTest"/>
         </classes>
     </test>
 </suite>

@@ -1,3 +1,4 @@
+package DemoQA;
 
 import Utils.DriverUtil;
 import org.openqa.selenium.JavascriptExecutor;

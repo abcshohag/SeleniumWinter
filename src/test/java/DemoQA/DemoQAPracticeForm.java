@@ -1,16 +1,22 @@
+package DemoQA;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class DemoQAPracticeForm {
     WebDriver d;
     final String TEST_IMG_PATH  = "/Users/shohag/IdeaProjects/SeleniumWinter/TestData/img.png";
+
+    @BeforeSuite
+    void testBEforeSuit(){
+        System.out.println("Test suit");
+    }
+
 
     @BeforeClass
     void test_prep(){
@@ -21,7 +27,13 @@ public class DemoQAPracticeForm {
         d.get("https://demoqa.com/automation-practice-form");
     }
 
-    @Test
+
+    @BeforeTest
+    void testBeforE(){
+        System.out.println("test");
+    }
+
+    @Test (priority = 0)
     void practiceFormTest() throws InterruptedException {
         By fName = new By.ByCssSelector("#firstName");
         By lName = new By.ByCssSelector("#lastName");

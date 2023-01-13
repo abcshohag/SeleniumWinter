@@ -36,11 +36,12 @@ public class JSAlert{
 
     @Test
     void test_Alert2() throws InterruptedException {
-        Thread.sleep(3000);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
         By alertButtonLocator = new By.ByCssSelector("#timerAlertButton");
         WebElement alertButton = driver.findElement(alertButtonLocator);
         alertButton.click();
+
         wait.until(ExpectedConditions.alertIsPresent()).accept();
     }
 

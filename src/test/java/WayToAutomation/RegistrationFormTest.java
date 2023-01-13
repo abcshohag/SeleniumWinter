@@ -1,5 +1,6 @@
 package WayToAutomation;
 
+import Utils.DriverUtil;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -73,8 +74,11 @@ public class RegistrationFormTest {
 
         //Select country
         By country = new By.ByCssSelector("fieldset:nth-child(4) select");
-        Select countrySelect = new Select( driver.findElement(country) );
-        countrySelect.selectByVisibleText("India");
+
+//        Select countrySelect = new Select( driver.findElement(country) );
+//        countrySelect.selectByValue("India");
+
+        DriverUtil.selectByVisibleText(country, "India");
 
 
         //Select month
